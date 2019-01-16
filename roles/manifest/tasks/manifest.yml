@@ -1,0 +1,8 @@
+---
+- name: "Criando service yaml..."
+  template:
+    src: "manifest.yml"
+    dest: "manifests/{{ item.value.app }}.yml"
+    mode: 0755
+  with_dict: "{{ services }}"
+  tags: svc

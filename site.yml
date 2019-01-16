@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  vars_files:
+    - "{{ playbook_dir }}/variables.yml"
+  connection: local
+  gather_facts: false
+  become: false
+  roles:
+  - manifest

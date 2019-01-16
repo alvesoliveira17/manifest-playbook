@@ -1,0 +1,20 @@
+---
+services:
+  api-team:
+    app: api-team
+    configmap:
+      - { name: apis-billing-config }
+      - { name: apis-cost-config }
+    ingress:
+      - { path: /hml/manifest }
+      - { path: /api/teste2 }
+    port: 5000
+
+  api-stage:
+    app: api-stage
+    configmap:
+      - { name: apis-billing-config}
+      - { name: apis-cost-config }
+    ingress:
+      - { path: /hml/test2 }
+    port: 5000
